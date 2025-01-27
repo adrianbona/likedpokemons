@@ -9,7 +9,7 @@ interface PokemonCardProps {
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, onLike }) => {
   return (
     <div onClick={onLike} style={styles.card}>
-      <h4>{pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</h4>
+      <h4>{pokemon.name}</h4>
       <img
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
       />

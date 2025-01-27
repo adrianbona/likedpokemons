@@ -27,6 +27,7 @@ export function usePokemon() {
         results.map((pokemon: Pokemon) => {
           return {
             ...pokemon,
+            name: pokemon.name[0].toUpperCase() + pokemon.name.slice(1),
             id: extractIdFromUrl(pokemon.url),
             liked: false,
           };
