@@ -65,13 +65,14 @@ main {
 .pokemon-card .like-button {
   display: inline-block;
   font-size: 0.9rem;
-  color: #888;
+  color: gray;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.pokemon-card .like-button.liked {
+.pokemon-card .like-button .liked {
   color: red;
+  font-weight: bold;
 }
 
 .liked-pokemon-list {
