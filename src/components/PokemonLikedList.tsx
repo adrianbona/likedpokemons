@@ -8,15 +8,19 @@ interface PokemonLikedListProps {
 const PokemonLikedList: React.FC<PokemonLikedListProps> = ({
   likedPokemons,
 }) => {
+  if (likedPokemons.length === 0) {
+    return null;
+  }
+
   return (
-    <>
-      <h2>Liked Pokémon</h2>
+    <div className="liked-pokemon-list">
+      <h2>Liked Pokémons</h2>
       <ul>
         {likedPokemons.map((likedPokemon: Pokemon) => (
           <li key={likedPokemon.name}>{likedPokemon.name}</li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

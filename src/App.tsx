@@ -7,9 +7,9 @@ export default function App() {
   const { pokemons, toggleLike, likedPokemons } = usePokemon();
 
   return (
-    <div>
+    <main>
       <PokemonList pokemons={pokemons} onLike={toggleLike} />
       <PokemonLikedList likedPokemons={likedPokemons} />
-    </div>
+    </main>
   );
 }

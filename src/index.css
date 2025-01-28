@@ -1,0 +1,91 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main {
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  width: 100%;
+  max-width: 1024px;
+  justify-items: center;
+  align-items: center;
+}
+
+.pokemon-card {
+  cursor: pointer;
+  width: 150px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.pokemon-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+}
+
+.pokemon-card .like-button {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.pokemon-card .like-button.liked {
+  color: red;
+}
+
+.liked-pokemon-list {
+  margin-top: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.liked-pokemon-list h2 {
+  margin-bottom: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

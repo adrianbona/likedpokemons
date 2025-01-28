@@ -11,7 +11,7 @@ const PokemonList: React.FC<PokemonListProps> = ({ pokemons, onLike }) => {
   return (
     <>
       <h1>Pokémon List</h1>
-      <div style={styles.listContainer}>
+      <div className="pokemon-list">
         {pokemons.map((pokemon: Pokemon) => (
           <PokemonCard
             key={pokemon.name}
@@ -22,15 +22,6 @@ const PokemonList: React.FC<PokemonListProps> = ({ pokemons, onLike }) => {
       </div>
     </>
   );
-};
-
-const styles: { [key: string]: React.CSSProperties } = {
-  listContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: "16px",
-  },
 };
 
 export default PokemonList;
